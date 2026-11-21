@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TimurBey İnşaat - Daire Detayı">
+    <title>Daire Detayı | TimurBey İnşaat</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/logo.png">
+</head>
+
+<body>
+
+    <!-- ===============================
+         NAVİGASYON
+         =============================== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="TimurBey İnşaat Logo" class="logo-img">
+                <div class="logo-text">TimurBey<span> İnşaat</span></div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html#anasayfa">Ana Sayfa</a></li>
+                <li><a href="index.html#ortak-alanlar">Projemiz</a></li>
+                <li><a href="index.html#daire-secici">Daireler</a></li>
+                <li><a href="index.html#hakkimizda">Hakkımızda</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===============================
+         DAİRE DETAY İÇERİĞİ
+         (JavaScript ile dinamik doldurulacak)
+         =============================== -->
+
+    <!-- Daire Header -->
+    <section class="daire-detay-header" id="daire-header">
+        <div class="container">
+            <a href="index.html#daire-secici" class="daire-geri-btn">
+                <i class="fas fa-arrow-left"></i>
+                Tüm Daireler
+            </a>
+            <div class="daire-baslik-alan">
+                <div class="daire-baslik-sol">
+                    <span class="daire-durum-badge" id="daire-durum-badge">Satılık</span>
+                    <h1 id="daire-baslik">Daire 1</h1>
+                    <p class="daire-konum" id="daire-konum">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>1. Kat • Güney Cephe • Eskişehir</span>
+                    </p>
+                </div>
+                <div class="daire-baslik-sag">
+                    <div class="daire-metraj-kartlari">
+                        <div class="metraj-kart">
+                            <span class="metraj-deger" id="daire-net-m2">120</span>
+                            <span class="metraj-etiket">Net m²</span>
+                        </div>
+                        <div class="metraj-ayrac"></div>
+                        <div class="metraj-kart">
+                            <span class="metraj-deger" id="daire-brut-m2">145</span>
+                            <span class="metraj-etiket">Brüt m²</span>
+                        </div>
+                        <div class="metraj-ayrac"></div>
+                        <div class="metraj-kart">
+                            <span class="metraj-deger" id="daire-tip">3+1</span>
+                            <span class="metraj-etiket">Oda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daire İçerik -->
+    <section class="daire-detay-icerik">
+        <div class="container">
+            <div class="daire-detay-grid">
+
+                <!-- Sol: Galeri ve Kat Planı -->
+                <div class="daire-detay-sol">
+
+                    <!-- Fotoğraf Galerisi -->
+                    <div class="daire-galeri-bolum">
+                        <h2>
+                            <i class="fas fa-images"></i>
+                            Daire Fotoğrafları
+                        </h2>
+                        <div class="daire-galeri-grid" id="daire-galeri">
+                            <!-- JS ile doldurulacak -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sağ: Bilgiler + Donanımlar + WhatsApp -->
+                <div class="daire-detay-sag">
+
+                    <!-- Daire Özellikleri -->
+                    <div class="daire-ozellik-kart">
+                        <h3>
+                            <i class="fas fa-info-circle"></i>
+                            Daire Bilgileri
+                        </h3>
+                        <div class="ozellik-listesi">
+                            <div class="ozellik-satir">
+                                <span class="ozellik-etiket">Daire No</span>
+                                <span class="ozellik-deger" id="oz-daire-no">1</span>
+                            </div>
+                            <div class="ozellik-satir">
+                                <span class="ozellik-etiket">Kat</span>
+                                <span class="ozellik-deger" id="oz-kat">1. Kat</span>
+                            </div>
+                            <div class="ozellik-satir">
+                                <span class="ozellik-etiket">Oda Tipi</span>
+                                <span class="ozellik-deger" id="oz-tip">3+1</span>
+                            </div>
+                            <div class="ozellik-satir">
+                                <span class="ozellik-etiket">Net Alan</span>
+                                <span class="ozellik-deger" id="oz-net">120 m²</span>
+                            </div>
+                            <div class="ozellik-satir">
+                                <span class="ozellik-etiket">Brüt Alan</span>
+                                <span class="ozellik-deger" id="oz-brut">145 m²</span>
+                            </div>
+                            <div class="ozellik-satir">
+                                <span class="ozellik-etiket">Cephe</span>
+                                <span class="ozellik-deger" id="oz-cephe">Güney</span>
+                            </div>
+                            <div class="ozellik-satir">
+                                <span class="ozellik-etiket">Durum</span>
+                                <span class="ozellik-deger durum-satilik" id="oz-durum">Satılık</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Standart Donanımlar -->
+                    <div class="daire-donanim-kart">
+                        <h3>
+                            <i class="fas fa-star"></i>
+                            Standart Donanımlar
+                        </h3>
+                        <ul class="donanim-listesi" id="donanim-listesi">
+                            <!-- JS ile doldurulacak -->
+                        </ul>
+                    </div>
+
+                    <!-- WhatsApp İletişim -->
+                    <a href="#" class="daire-whatsapp-btn" id="daire-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="whatsapp-btn-icerik">
+                            <span class="whatsapp-btn-baslik">WhatsApp ile Bilgi Alın</span>
+                            <span class="whatsapp-btn-alt">Hemen iletişime geçin</span>
+                        </div>
+                    </a>
+
+                    <!-- Geri Dön -->
+                    <a href="index.html#daire-secici" class="daire-tumunu-gor-btn">
+                        <i class="fas fa-building"></i>
+                        Tüm Daireleri Gör
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         LIGHTBOX MODAL
+         =============================== -->
+    <div class="daire-lightbox" id="daire-lightbox">
+        <div class="daire-lightbox-overlay" id="daire-lightbox-overlay"></div>
+        <div class="daire-lightbox-icerik">
+            <button class="daire-lightbox-kapat" id="daire-lightbox-kapat">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="daire-lightbox-nav daire-lightbox-prev" id="daire-lightbox-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img src="" alt="" id="daire-lightbox-img" class="daire-lightbox-resim">
+            <button class="daire-lightbox-nav daire-lightbox-next" id="daire-lightbox-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="daire-lightbox-alt">
+                <span class="daire-lightbox-baslik" id="daire-lightbox-baslik"></span>
+                <span class="daire-lightbox-sayac" id="daire-lightbox-sayac">1 / 10</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===============================
+         SATILDI UYARISI (Daire 9 için)
+         =============================== -->
+    <div class="daire-satildi-overlay" id="daire-satildi-overlay" style="display:none;">
+        <div class="daire-satildi-modal">
+            <div class="satildi-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <h2>Bu Daire Satılmıştır</h2>
+            <p>İlgilendiğiniz daire satılmıştır. Diğer mevcut dairelerimizi inceleyebilirsiniz.</p>
+            <a href="index.html#daire-secici" class="btn-gold">
+                <i class="fas fa-building"></i>
+                Dairelere Dön
+            </a>
+        </div>
+    </div>
+
+    <!-- ===============================
+         FOOTER
+         =============================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Hızlı Erişim</h4>
+                    <ul>
+                        <li><a href="index.html#anasayfa">Ana Sayfa</a></li>
+                        <li><a href="index.html#ortak-alanlar">Projemiz</a></li>
+                        <li><a href="index.html#daire-secici">Daireler</a></li>
+                        <li><a href="index.html#hakkimizda">Hakkımızda</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="index.html#daire-secici">Daireler</a></li>
+                        <li><a href="index.html#hizmetler">Kurumsal Yapılar</a></li>
+                        <li><a href="renovasyon.html">Renovasyon</a></li>
+                        <li><a href="index.html#iletisim">Danışmanlık</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>İletişim</h4>
+                    <ul>
+                        <li><a href="tel:+905425764591">0542 576 45 91</a></li>
+                        <li><a href="mailto:info@timurbey.com.tr">info@timurbey.com.tr</a></li>
+                        <li><a href="#">Çamlıca Mah. Gurbet Sok. No:3/8, Eskişehir</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 TimurBey İnşaat. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/daireler.js"></script>
+    <script src="js/daire-detay.js"></script>
+    <script src="script.js"></script>
+    <script src="js/theme.js"></script>
+
+</body>
+
+</html>

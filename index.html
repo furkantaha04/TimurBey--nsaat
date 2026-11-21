@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TimurBey İnşaat - Profesyonel inşaat hizmetleri ve lüks yapı projeleri">
+    <title>TimurBey İnşaat | Prestij ve Kalite</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/logo.png">
+</head>
+
+<body>
+
+    <!-- ===============================
+         NAVİGASYON
+         =============================== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="TimurBey İnşaat Logo" class="logo-img">
+                <div class="logo-text">TimurBey<span> İnşaat</span></div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li><a href="#ortak-alanlar">Projemiz</a></li>
+                <li><a href="#daire-secici">Daireler</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===============================
+         HERO BÖLÜMÜ
+         =============================== -->
+    <section class="hero" id="anasayfa">
+        <div class="hero-decor"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Sol Taraf - Yazı İçeriği -->
+                <div class="hero-content">
+                    <div class="hero-label">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Çamlıca Mah. Gülşen Sok. No:26</span>
+                    </div>
+
+                    <h1>
+                        Asminay Apartmanı
+                        <span class="gold">Modern Yaşam Alanı</span>
+                    </h1>
+
+                    <p>Projemiz; üstün işçilik ve modern mimarisiyle konforlu bir yaşam sunuyor.</p>
+
+                    <div class="hero-buttons">
+                        <a href="#iletisim" class="btn-gold">
+                            <i class="fas fa-phone-alt"></i>
+                            Ücretsiz Keşif
+                        </a>
+                        <a href="#daire-secici" class="btn-outline">
+                            <i class="fas fa-building"></i>
+                            Daireleri İncele
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sağ Taraf - Slider -->
+                <div class="hero-slider-wrapper">
+                    <div class="hero-slider" id="heroSlider">
+                        <div class="slider-track" id="sliderTrack">
+                            <a href="#ortak-alanlar" class="slide" data-index="0">
+                                <img src="images/DısCephe/dis1.jpeg" alt="Dış Cephe 1">
+                                <div class="slide-info">
+                                    <span class="slide-category">Dış Cephe</span>
+                                    <h3>Asminay Apartmanı</h3>
+                                    <p><i class="fas fa-map-marker-alt"></i> Çamlıca Mah. Gülşen Sok. No:26, Eskişehir
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#ortak-alanlar" class="slide" data-index="1">
+                                <img src="images/DısCephe/dis2.jpeg" alt="Dış Cephe 2">
+                                <div class="slide-info">
+                                    <span class="slide-category">Dış Cephe</span>
+                                    <h3>Modern Mimari</h3>
+                                    <p><i class="fas fa-map-marker-alt"></i> Çamlıca Mah. Gülşen Sok. No:26, Eskişehir
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#ortak-alanlar" class="slide" data-index="2">
+                                <img src="images/DısCephe/dis3.jpeg" alt="Dış Cephe 3">
+                                <div class="slide-info">
+                                    <span class="slide-category">Bina Girişi</span>
+                                    <h3>Lüks Tasarım</h3>
+                                    <p><i class="fas fa-map-marker-alt"></i> Çamlıca Mah. Gülşen Sok. No:26, Eskişehir
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#ortak-alanlar" class="slide" data-index="3">
+                                <img src="images/kapi-girisi.jpeg" alt="Kapı Girişi">
+                                <div class="slide-info">
+                                    <span class="slide-category">Giriş</span>
+                                    <h3>Kapı Girişi</h3>
+                                    <p><i class="fas fa-map-marker-alt"></i> Çamlıca Mah. Gülşen Sok. No:26, Eskişehir
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Navigasyon Okları -->
+                        <button class="slider-nav slider-prev" id="sliderPrev" aria-label="Önceki">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-nav slider-next" id="sliderNext" aria-label="Sonraki">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Slider Kontrolleri -->
+                    <div class="slider-controls">
+                        <div class="slider-dots" id="sliderDots">
+                            <button class="dot active" data-index="0"></button>
+                            <button class="dot" data-index="1"></button>
+                            <button class="dot" data-index="2"></button>
+                            <button class="dot" data-index="3"></button>
+                        </div>
+                        <div class="slider-progress">
+                            <div class="slider-progress-bar" id="sliderProgress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         İSTATİSTİKLER
+         =============================== -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="1" data-suffix="+">0</div>
+                    <div class="stat-label">Tamamlanan Proje</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="5" data-suffix="">0</div>
+                    <div class="stat-label">Yıllık Deneyim</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="50" data-suffix="+">0</div>
+                    <div class="stat-label">Uzman Ekip</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="100" data-suffix="%">0</div>
+                    <div class="stat-label">Müşteri Memnuniyeti</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         ORTAK ALANLAR VİTRİNİ
+         =============================== -->
+    <section class="ortak-alanlar" id="ortak-alanlar">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">— Asminay Apartmanı —</span>
+                <h2>Bina & Ortak Alanlar</h2>
+                <div class="gold-line"></div>
+                <p class="section-desc">Kaliteli işçilik ve modern mimariyle tasarlanan binamız, konforlu yaşamın tüm
+                    detaylarını sunmaktadır.</p>
+            </div>
+
+            <!-- Dış Cephe Slider -->
+            <div class="ortak-dis-cephe-slider reveal">
+                <div class="dis-cephe-slider-wrapper" id="disCepheWrapper">
+                    <div class="dis-cephe-track" id="disCepheTrack">
+                        <div class="dis-cephe-slide">
+                            <img src="images/DısCephe/dis1.jpeg" alt="Dış Cephe - Ön Görünüm" loading="lazy">
+                            <div class="galeri-item-overlay"><i class="fas fa-search-plus"></i></div>
+                            <div class="ortak-galeri-etiket">
+                                <i class="fas fa-building"></i>
+                                <span>Dış Cephe 1</span>
+                            </div>
+                        </div>
+                        <div class="dis-cephe-slide">
+                            <img src="images/DısCephe/dis2.jpeg" alt="Dış Cephe - Yan Cephe" loading="lazy">
+                            <div class="galeri-item-overlay"><i class="fas fa-search-plus"></i></div>
+                            <div class="ortak-galeri-etiket">
+                                <i class="fas fa-building"></i>
+                                <span>Dış Cephe 2</span>
+                            </div>
+                        </div>
+                        <div class="dis-cephe-slide">
+                            <img src="images/DısCephe/dis3.jpeg" alt="Dış Cephe - Mimari Detay" loading="lazy">
+                            <div class="galeri-item-overlay"><i class="fas fa-search-plus"></i></div>
+                            <div class="ortak-galeri-etiket">
+                                <i class="fas fa-building"></i>
+                                <span>Dış Cephe 3</span>
+                            </div>
+                        </div>
+                        <div class="dis-cephe-slide">
+                            <img src="images/DısCephe/dis4.jpeg" alt="Dış Cephe - Giriş & Çevre" loading="lazy">
+                            <div class="galeri-item-overlay"><i class="fas fa-search-plus"></i></div>
+                            <div class="ortak-galeri-etiket">
+                                <i class="fas fa-building"></i>
+                                <span>Dış Cephe 4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slider Okları -->
+                    <button class="dis-cephe-nav dis-cephe-prev" id="disCephePrev" aria-label="Önceki Görsel">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="dis-cephe-nav dis-cephe-next" id="disCepheNext" aria-label="Sonraki Görsel">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <!-- Dots -->
+                    <div class="dis-cephe-dots" id="disCepheDots">
+                        <button class="dis-cephe-dot active" data-index="0" aria-label="Görsel 1"></button>
+                        <button class="dis-cephe-dot" data-index="1" aria-label="Görsel 2"></button>
+                        <button class="dis-cephe-dot" data-index="2" aria-label="Görsel 3"></button>
+                        <button class="dis-cephe-dot" data-index="3" aria-label="Görsel 4"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ortak Alan Galeri (tıklanabilir) -->
+            <div class="ortak-galeri reveal">
+                <div class="ortak-galeri-item">
+                    <img src="images/kapi-girisi.jpeg" alt="Bina Giriş Kapısı" loading="lazy">
+                    <div class="galeri-item-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="ortak-galeri-etiket">
+                        <i class="fas fa-door-open"></i>
+                        <span>Giriş Kapısı</span>
+                    </div>
+                </div>
+                <div class="ortak-galeri-item">
+                    <img src="images/giris-koridoru.jpeg" alt="Giriş Koridoru" loading="lazy">
+                    <div class="galeri-item-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="ortak-galeri-etiket">
+                        <i class="fas fa-archway"></i>
+                        <span>Giriş Koridoru</span>
+                    </div>
+                </div>
+                <div class="ortak-galeri-item">
+                    <img src="images/giris-kridoru2.jpeg" alt="Koridor Detayı" loading="lazy">
+                    <div class="galeri-item-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="ortak-galeri-etiket">
+                        <i class="fas fa-archway"></i>
+                        <span>Koridor</span>
+                    </div>
+                </div>
+                <div class="ortak-galeri-item">
+                    <img src="images/merdiven.jpeg" alt="Merdiven" loading="lazy">
+                    <div class="galeri-item-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="ortak-galeri-etiket">
+                        <i class="fas fa-stairs"></i>
+                        <span>Merdiven</span>
+                    </div>
+                </div>
+                <div class="ortak-galeri-item" data-gallery='[{"src":"images/bahce1.jpeg","baslik":"Bahçe 1"},{"src":"images/bahce2.jpeg","baslik":"Bahçe 2"}]'>
+                    <img src="images/bahce1.jpeg" alt="Bahçe" loading="lazy">
+                    <div class="galeri-item-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="ortak-galeri-etiket">
+                        <i class="fas fa-tree"></i>
+                        <span>Bahçe</span>
+                    </div>
+                </div>
+                <div class="ortak-galeri-item">
+                    <img src="images/sistem-odasi.jpeg" alt="Sistem Odası" loading="lazy">
+                    <div class="galeri-item-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="ortak-galeri-etiket">
+                        <i class="fas fa-server"></i>
+                        <span>Sistem Odası</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ortak Alan Lightbox -->
+            <div class="daire-lightbox" id="ortak-lightbox" role="dialog" aria-modal="true"
+                aria-label="Tam Ekran Görsel">
+                <div class="daire-lightbox-overlay"></div>
+                <div class="daire-lightbox-icerik">
+                    <button class="daire-lightbox-kapat" aria-label="Kapat">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button class="daire-lightbox-nav daire-lightbox-prev" aria-label="Önceki Görsel">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <img src="" alt="" id="ortak-lightbox-img" class="daire-lightbox-resim">
+                    <button class="daire-lightbox-nav daire-lightbox-next" aria-label="Sonraki Görsel">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="daire-lightbox-alt">
+                        <span class="daire-lightbox-baslik" id="ortak-lightbox-baslik"></span>
+                        <span class="daire-lightbox-sayac" id="ortak-lightbox-sayac"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bina Avantajları -->
+            <div class="bina-avantajlari reveal">
+                <div class="avantaj-kart">
+                    <div class="avantaj-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Merkezi Konum</h4>
+                    <p>Şehir merkezine yakın, ulaşım kolaylığı</p>
+                </div>
+                <div class="avantaj-kart">
+                    <div class="avantaj-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h4>Kaliteli İşçilik</h4>
+                    <p>A sınıfı malzeme ve uzman ekip</p>
+                </div>
+                <div class="avantaj-kart">
+                    <div class="avantaj-icon">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h4>Lüks Bina Girişi</h4>
+                    <p>Prestijli ve modern giriş tasarımı</p>
+                </div>
+                <div class="avantaj-kart">
+                    <div class="avantaj-icon">
+                        <i class="fas fa-elevator"></i>
+                    </div>
+                    <h4>Asansör</h4>
+                    <p>Modern ve sessiz asansör sistemi</p>
+                </div>
+                <div class="avantaj-kart">
+                    <div class="avantaj-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h4>Peyzaj</h4>
+                    <p>Özenle tasarlanmış yeşil alanlar</p>
+                </div>
+                <div class="avantaj-kart">
+                    <div class="avantaj-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>7/24 Güvenlik</h4>
+                    <p>Kamera sistemi ve güvenlik hizmeti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         PROJE TANITIM FİLMİ
+         =============================== -->
+    <section class="tanitim-filmi-section" id="tanitim-filmi">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">— Video —</span>
+                <h2>Proje Tanıtım Filmi</h2>
+                <div class="gold-line"></div>
+                <p class="section-desc">Asminay Apartmanı'nın detaylarını ve sunduğu ayrıcalıkları tanıtım filmimizde
+                    keşfedin.</p>
+            </div>
+
+            <div class="video-container reveal">
+                <div class="video-thumbnail" id="videoThumbnail">
+                    <img src="images/DısCephe/dis1.jpeg" alt="Proje Tanıtım Kapak" class="video-cover">
+                    <div class="video-overlay"></div>
+                    <button class="play-button" id="playVideoBtn" aria-label="Videoyu Oynat">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                <div class="video-player-wrapper" id="videoPlayerWrapper" style="display: none;">
+                    <video id="tanitimVideo" class="tanitim-video" controls preload="none">
+                        <source src="images/tanitim-filmi.mp4" type="video/mp4">
+                        Tarayıcınız video etiketini desteklemiyor.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         İNTERAKTİF BİNA SEÇİCİ
+         =============================== -->
+    <section class="bina-secici-section" id="daire-secici">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">— Daireler —</span>
+                <h2>Dairenizi Seçin</h2>
+                <div class="gold-line"></div>
+                <p class="section-desc">3 katlı binamızda 9 daire bulunmaktadır. Daire detaylarını görmek için ilgili
+                    daireye tıklayın.</p>
+            </div>
+
+            <div class="bina-yapisi reveal">
+                <!-- Çatı / Teras -->
+                <div class="bina-cati">
+                    <div class="cati-desen"></div>
+                    <div class="cati-korkuluk">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="cati-yazi">
+                        <i class="fas fa-crown"></i>
+                        TimurBey İnşaat
+                    </div>
+                </div>
+
+                <!-- 3. Kat -->
+                <div class="bina-kat" data-kat="3">
+                    <div class="kat-etiket">
+                        <span>3. KAT</span>
+                    </div>
+                    <div class="kat-daireler">
+                        <a href="proje-detay.html?daire=7" class="daire-hucre satilik" data-daire="7" id="daire-7">
+                            <div class="daire-pencere">
+                                <div class="pencere-cam"></div>
+                            </div>
+                            <div class="daire-bilgi">
+                                <span class="daire-no">Daire 7</span>
+                                <span class="daire-tip">2+1</span>
+
+                            </div>
+                            <div class="daire-rozet satilik-rozet">
+                                <i class="fas fa-check-circle"></i> Satılık
+                            </div>
+                        </a>
+                        <a href="proje-detay.html?daire=8" class="daire-hucre satilik" data-daire="8" id="daire-8">
+                            <div class="daire-pencere">
+                                <div class="pencere-cam"></div>
+                            </div>
+                            <div class="daire-bilgi">
+                                <span class="daire-no">Daire 8</span>
+                                <span class="daire-tip">2+1</span>
+
+                            </div>
+                            <div class="daire-rozet satilik-rozet">
+                                <i class="fas fa-check-circle"></i> Satılık
+                            </div>
+                        </a>
+                        <div class="daire-hucre satildi" data-daire="9" id="daire-9">
+                            <div class="daire-pencere">
+                                <div class="pencere-cam"></div>
+                            </div>
+                            <div class="daire-bilgi">
+                                <span class="daire-no">Daire 9</span>
+                                <span class="daire-tip">3+1</span>
+
+                            </div>
+                            <div class="daire-rozet satildi-rozet">
+                                <i class="fas fa-times-circle"></i> Satıldı
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Kat -->
+                <div class="bina-kat" data-kat="2">
+                    <div class="kat-etiket">
+                        <span>2. KAT</span>
+                    </div>
+                    <div class="kat-daireler">
+                        <a href="proje-detay.html?daire=4" class="daire-hucre satilik" data-daire="4" id="daire-4">
+                            <div class="daire-pencere">
+                                <div class="pencere-cam"></div>
+                            </div>
+                            <div class="daire-bilgi">
+                                <span class="daire-no">Daire 4</span>
+                                <span class="daire-tip">2+1</span>
+
+                            </div>
+                            <div class="daire-rozet satilik-rozet">
+                                <i class="fas fa-check-circle"></i> Satılık
+                            </div>
+                        </a>
+                        <a href="proje-detay.html?daire=5" class="daire-hucre satilik" data-daire="5" id="daire-5">
+                            <div class="daire-pencere">
+                                <div class="pencere-cam"></div>
+                            </div>
+                            <div class="daire-bilgi">
+                                <span class="daire-no">Daire 5</span>
+                                <span class="daire-tip">2+1</span>
+
+                            </div>
+                            <div class="daire-rozet satilik-rozet">
+                                <i class="fas fa-check-circle"></i> Satılık
+                            </div>
+                        </a>
+                        <a href="proje-detay.html?daire=6" class="daire-hucre satilik" data-daire="6" id="daire-6">
+                            <div class="daire-pencere">
+                                <div class="pencere-cam"></div>
+                            </div>
+                            <div class="daire-bilgi">
+                                <span class="daire-no">Daire 6</span>
+                                <span class="daire-tip">2+1</span>
+
+                            </div>
+                            <div class="daire-rozet satilik-rozet">
+                                <i class="fas fa-check-circle"></i> Satılık
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 1. Kat -->
+                <div class="bina-kat" data-kat="1">
+                    <div class="kat-etiket">
+                        <span>1. KAT</span>
+                    </div>
+                    <div class="kat-daireler">
+                        <a href="proje-detay.html?daire=1" class="daire-hucre satilik" data-daire="1" id="daire-1">
+                            <div class="daire-pencere">
+                                <div class="pencere-cam"></div>
+                            </div>
+                            <div class="daire-bilgi">
+                                <span class="daire-no">Daire 1</span>
+                                <span class="daire-tip">2+1</span>
+
+                            </div>
+                            <div class="daire-rozet satilik-rozet">
+                                <i class="fas fa-check-circle"></i> Satılık
+                            </div>
+                        </a>
+                        <a href="proje-detay.html?daire=2" class="daire-hucre satilik" data-daire="2" id="daire-2">
+                            <div class="daire-pencere">
+                                <div class="pencere-cam"></div>
+                            </div>
+                            <div class="daire-bilgi">
+                                <span class="daire-no">Daire 2</span>
+                                <span class="daire-tip">2+1</span>
+
+                            </div>
+                            <div class="daire-rozet satilik-rozet">
+                                <i class="fas fa-check-circle"></i> Satılık
+                            </div>
+                        </a>
+                        <a href="proje-detay.html?daire=3" class="daire-hucre satilik" data-daire="3" id="daire-3">
+                            <div class="daire-pencere">
+                                <div class="pencere-cam"></div>
+                            </div>
+                            <div class="daire-bilgi">
+                                <span class="daire-no">Daire 3</span>
+                                <span class="daire-tip">2+1</span>
+
+                            </div>
+                            <div class="daire-rozet satilik-rozet">
+                                <i class="fas fa-check-circle"></i> Satılık
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bina Temeli -->
+                <div class="bina-temel">
+                    <div class="temel-cizgi"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         HAKKIMIZDA
+         =============================== -->
+    <section class="about" id="hakkimizda">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">— Hakkımızda —</span>
+                <h2>Neden Biz?</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image reveal">
+                    <img src="images/DısCephe/dis2.jpeg" alt="TimurBey İnşaat Projesi">
+                </div>
+
+                <div class="about-text reveal">
+                    <h3>Mükemmelliğe Olan Bağlılığımız</h3>
+                    <p>TimurBey İnşaat olarak 2025 yılından bu yana sektörde faaliyet gösteriyoruz. Kalite
+                        standartlarından ödün vermeden, müşterilerimizin hayallerini gerçeğe dönüştürüyoruz.</p>
+                    <p>Her projede detaylara gösterdiğimiz özen ve kullandığımız birinci sınıf malzemeler, bizi sektörde
+                        öne çıkarıyor.</p>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-gem"></i>
+                            <span>Premium Malzeme</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Zamanında Teslimat</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <span>Uzman Kadro</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-headset"></i>
+                            <span>7/24 Destek</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         HİZMETLER
+         =============================== -->
+    <section class="services" id="hizmetler">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">— Hizmetlerimiz —</span>
+                <h2>Uzmanlık Alanlarımız</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <span class="service-icon">◈</span>
+                    <h3>Lüks Konut Projeleri</h3>
+                    <p>Modern mimari anlayışla tasarlanan, yaşam kalitenizi yükselten prestijli konut projeleri
+                        geliştiriyoruz.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <span class="service-icon">◇</span>
+                    <h3>Kurumsal Yapılar</h3>
+                    <p>İş dünyasının ihtiyaçlarına özel, fonksiyonel ve estetik kurumsal binalar inşa ediyoruz.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <span class="service-icon">▣</span>
+                    <h3>Endüstriyel Tesisler</h3>
+                    <p>Üretim ve lojistik ihtiyaçlarınız için anahtar teslim endüstriyel tesis çözümleri sunuyoruz.</p>
+                </div>
+
+                <a href="renovasyon.html" class="service-card reveal" style="display:block;color:inherit;">
+                    <span class="service-icon">◐</span>
+                    <h3>Renovasyon</h3>
+                    <p>Mevcut yapılarınızı modern standartlara kavuşturuyor, değerini artırıyoruz.</p>
+                </a>
+
+                <div class="service-card reveal">
+                    <span class="service-icon">⬡</span>
+                    <h3>Mimari Tasarım</h3>
+                    <p>İşlev ve estetiği bir araya getiren, özgün mimari projeler tasarlıyoruz.</p>
+                </div>
+
+                <a href="#iletisim" class="service-card reveal" style="display:block;color:inherit;">
+                    <span class="service-icon">◎</span>
+                    <h3>Danışmanlık</h3>
+                    <p>Proje fizibilitesinden yönetimine kadar kapsamlı profesyonel danışmanlık hizmeti.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         MÜŞTERİ YORUMLARI
+         =============================== -->
+    <section class="testimonials" id="yorumlar">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">— Müşteri Yorumları —</span>
+                <h2>Mutlu Müşterilerimiz</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <p>TimurBey İnşaat ile çalışmak gerçekten profesyonel bir deneyimdi. Projemiz zamanında ve bütçe
+                        dahilinde tamamlandı. Kaliteden asla ödün vermediler.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Mehmet Yılmaz</h4>
+
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <p> inşaatında gösterdikleri özen ve detaycılık bizi çok etkiledi.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Ayşe Kaya</h4>
+
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <p>Hayallerimizin evini inşa ettiler. Her detay tam istediğimiz gibi oldu. TimurBey'i herkese
+                        tavsiye ediyorum.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Rahim Timur</h4>
+                            <span>Daire Sahibi</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         İLETİŞİM
+         =============================== -->
+    <section class="contact" id="iletisim">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">— İletişim —</span>
+                <h2>Bize Ulaşın</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info reveal">
+                    <h3>Projenizi Konuşalım</h3>
+                    <p>Hayallerinizdeki yapıyı birlikte tasarlayalım. Ücretsiz keşif ve detaylı fiyat teklifi için
+                        bizimle iletişime geçin.</p>
+
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>Adres</span>
+                                <p>Çamlıca Mah. Gurbet Sok. No:3/8, Eskişehir</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>Telefon</span>
+                                <p>0542 576 45 91</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>E-posta</span>
+                                <p>info@timurbey.com.tr</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>Çalışma Saatleri</span>
+                                <p>Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form reveal">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Spam koruması için gizli alan -->
+                        <p style="display:none;">
+                            <label>Bu alanı doldurmayın: <input name="bot-field" /></label>
+                        </p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Ad Soyad</label>
+                                <input type="text" id="name" name="name" placeholder="Adınızı giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" placeholder="05XX XXX XX XX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-posta</label>
+                            <input type="email" id="email" name="email" placeholder="ornek@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Proje Türü</label>
+                            <input type="text" id="subject" name="subject" placeholder="Konut, Ticari, Renovasyon...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" name="message" placeholder="Projeniz hakkında bilgi verin..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-gold" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-paper-plane"></i>
+                            Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         FOOTER
+         =============================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Hızlı Erişim</h4>
+                    <ul>
+                        <li><a href="#anasayfa">Ana Sayfa</a></li>
+                        <li><a href="#ortak-alanlar">Projemiz</a></li>
+                        <li><a href="#daire-secici">Daireler</a></li>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="#daire-secici">Daireler</a></li>
+                        <li><a href="#hizmetler">Kurumsal Yapılar</a></li>
+                        <li><a href="renovasyon.html">Renovasyon</a></li>
+                        <li><a href="#iletisim">Danışmanlık</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>İletişim</h4>
+                    <ul>
+                        <li><a href="tel:+905425764591">0542 576 45 91</a></li>
+                        <li><a href="mailto:info@timurbey.com.tr">info@timurbey.com.tr</a></li>
+                        <li><a href="#">Çamlıca Mah. Gurbet Sok. No:3/8, Eskişehir</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 TimurBey İnşaat. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript - MVC Architecture -->
+    <script type="module" src="js/app.js"></script>
+
+    <!-- Theme Toggle -->
+    <script src="js/theme.js"></script>
+
+    <!-- Bina ve Ortak Alanlar (Slider & Lightbox) -->
+    <script src="js/ortak-alanlar.js"></script>
+
+    <!-- Proje Tanıtım Filmi -->
+    <script src="js/tanitim-video.js"></script>
+
+    <!-- AI Chatbot -->
+    <script src="js/chatbot.js"></script>
+
+    <!-- WhatsApp Butonu -->
+    <a href="https://wa.me/905425764591" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"
+        title="WhatsApp ile iletişime geçin">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+
+</html>
